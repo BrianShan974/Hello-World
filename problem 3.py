@@ -14,9 +14,16 @@ def find_longest(a_list):
 
 string = str(input("Please enter the string:"))
 list1 = []
-for character in string:
-    if ord(string[string.index(character)]) > ord(string[string.index(character) + 1]):
-        list1.append(cut(string, string.index(character)))
-        string = cut2(string, string.index(character))
+i = 1
+while i < len(string):
+    if i > 0:
+        if ord(string[i]) < ord(string[i - 1]):
+            list1.append(cut(string, i - 1))
+            string = cut2(string, i - 1)
+            i = 0
+        else:
+            i += 1
+    else:
+        i += 1
 
 print(find_longest(list1))
