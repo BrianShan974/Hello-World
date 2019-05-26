@@ -24,10 +24,10 @@ def payment(debt, months, annualInterestRate):
             if newDebt > 0:
                 pay = bisection(lowerBound, upperBound)
                 lowerBound = pay
-                upperBound = debt
-            else:
+                upperBound = bisection(pay, upperBound)
+            elif newDebt <= -0.001:
                 pay = bisection(lowerBound, upperBound)
-                lowerBound = 0
+                lowerBound = bisection(0, pay)
                 upperBound = pay
     return pay
 
