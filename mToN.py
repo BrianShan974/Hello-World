@@ -36,7 +36,7 @@ if n == 10:
 	print(numberDenary)
 else:
 	while digit != 0:
-		theHighestPowerBelow = n ** (log(n, numberDenary) + 1)
+		theHighestPowerBelow = n ** log(n, numberDenary)
 		digit = numberDenary // theHighestPowerBelow
 		output = digits[digit] + output
 		numberDenary %= theHighestPowerBelow
