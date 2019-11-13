@@ -16,7 +16,6 @@ counterList.append(counter)
 
 output = ""
 
-print(counterList)
 for i in range(len(preOutput)):
 	output += str(counterList[i])
 	output += preOutput[i]
