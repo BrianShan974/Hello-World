@@ -1,4 +1,4 @@
-string = "AAAAAAABBBBBBBBBBBBBCCC"
+string = "AAAAAAABBBBBBBBBBBBBCCCDDDDDDAAABBBBB"
 
 preOutput = string[0]
 counter = 0
